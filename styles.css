@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-image: url("images/Background.jpg");
+    background-size: cover;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.x {
+    background-color: black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.slash-r {
+    width: 15px;
+    background-color: #f980a9;
+    height: 100px;
+    transform: rotate(315deg);
+}
+.slash-l {
+    width: 15px;
+    background-color: #f980a9;
+    height: 100px;
+    transform: rotate(45deg);
+    position: absolute;
+   
+}
+
+.x::before {
+    content: "4";
+    position: absolute;
+    left: -100%;
+    font-family: 'Open Sans';
+    font-size: 208px;
+    color: white;
+}
+.x::after {
+    content: "4";
+    position: absolute;
+    right: -100%;
+    font-family: 'Open Sans';
+    font-size: 208px;
+    color: white;
+}
+.text {
+    text-align: center;
+    margin-top:50px;
+    line-height: 2;
+}
+.text p {
+    color: white;
+   
+}
+.text p:nth-of-type(2) {
+    color: #fedd0b;
+}
+form {
+    width: 100%;
+}
+form input {
+    border: 1px solid white;
+    width: 600px;
+    padding: 20px;
+    background-color: transparent;
+    caret-color: white;
+    color: white;
+  
+}
+form input:focus {
+    outline: none;
+}
+form input::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+form button {
+    position: absolute;
+    padding: 20px 40px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;    
+}
+@media (max-width:877px) {
+    .not-found {
+        width:50%;
+    }
+    form input {
+        width: 100%;
+    }
+    form button {
+        position: relative;
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    .x {
+        width: calc(150px / 2);
+        height: calc(150px / 2);
+    }
+    .slash-l {
+        height: calc(100px / 2);
+        width: calc(15px / 2);
+    }
+    .slash-r {
+        height: calc(100px / 2);
+        width: calc(15px / 2);
+    }
+    .x::after {
+        font-size: 104px;
+    }
+    .x::before {
+        font-size: 104px;
+    }
+}
