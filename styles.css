@@ -131,3 +131,8 @@ form button {
         font-size: 104px;
     }
 }
+@media (max-width:470px) {
+    .text p {
+        font-size: 15px;
+    }
+}
